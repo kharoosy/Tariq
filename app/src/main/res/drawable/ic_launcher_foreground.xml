@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Sticker / image icon: simple smile inside a rounded square -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,20 C35.2,20 20,35.2 20,54 C20,72.8 35.2,88 54,88 C72.8,88 88,72.8 88,54 C88,35.2 72.8,20 54,20 Z
+                          M44,46 C44,43.8 45.8,42 48,42 C50.2,42 52,43.8 52,46 C52,48.2 50.2,50 48,50 C45.8,50 44,48.2 44,46 Z
+                          M60,46 C60,43.8 61.8,42 64,42 C66.2,42 68,43.8 68,46 C68,48.2 66.2,50 64,50 C61.8,50 60,48.2 60,46 Z
+                          M54,72 C44,72 36,65 34,56 L74,56 C72,65 64,72 54,72 Z" />
+</vector>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Storage permissions for reading images on older Android versions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- For Android 13+ (API 33), use granular media permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tariq">
+
+        <!-- Main activity: lists all sticker packs and allows adding to WhatsApp -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity for creating a new sticker pack from device images -->
+        <activity
+            android:name=".CreatePackActivity"
+            android:exported="false"
+            android:label="@string/create_pack_title"
+            android:parentActivityName=".MainActivity" />
+
+        <!--
+            Content Provider for WhatsApp sticker integration.
+            The authority MUST equal applicationId + ".stickercontentprovider".
+            WhatsApp queries this provider to fetch sticker pack metadata and images.
+            android:exported="true" is required so WhatsApp can read from it.
+            android:readPermission restricts reads to WhatsApp and our own app.
+        -->
+        <provider
+            android:name=".provider.StickerContentProvider"
+            android:authorities="${applicationId}.stickercontentprovider"
+            android:exported="true"
+            android:readPermission="com.whatsapp.permission.STICKER_IMAGE_PROVIDER" />
+
+    </application>
+
+</manifest>
