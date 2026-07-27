@@ -1,6 +1,6 @@
 # Tariq – WhatsApp Sticker Maker
 
-An Android app that lets you pick images from your device gallery in bulk and add them as a custom sticker pack directly to WhatsApp.
+An Android app .apk file that lets you pick images from your device gallery in bulk and add them as a custom sticker pack directly to WhatsApp.
 
 ---
 
