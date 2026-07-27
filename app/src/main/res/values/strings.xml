@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tariq Sticker Maker</string>
+    <string name="no_images_found">No images found on your device.</string>
+    <string name="permission_denied">Storage permission is required to load images.</string>
+    <string name="selection_count">%1$d / %2$d stickers selected</string>
+    <string name="min_stickers_required">Please select at least %1$d stickers.</string>
+    <string name="max_stickers_exceeded">WhatsApp allows a maximum of %1$d stickers per pack.</string>
+    <string name="fab_next">Create Pack</string>
+
+    <!-- StickerPackActivity -->
+    <string name="create_pack_title">Create Sticker Pack</string>
+    <string name="pack_name_hint">Pack name</string>
+    <string name="author_name_hint">Your name (author)</string>
+    <string name="pack_name_required">Pack name is required</string>
+    <string name="author_name_required">Author name is required</string>
+    <string name="preview_label">Sticker preview</string>
+    <string name="image_count_label">%1$d images selected</string>
+    <string name="converting">Converting stickers…</string>
+    <string name="add_to_whatsapp">Add to WhatsApp</string>
+    <string name="whatsapp_not_installed">WhatsApp is not installed on this device.</string>
+    <string name="pack_added_success">Sticker pack added to WhatsApp!</string>
+    <string name="conversion_error">Conversion failed: %1$s</string>
+    <string name="whatsapp_error">WhatsApp returned an error: %1$s</string>
+</resources>
