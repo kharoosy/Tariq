@@ -42,6 +42,7 @@
             android:authorities="${contentProviderAuthority}"
             android:enabled="true"
             android:exported="true"
+            android:grantUriPermissions="true"
             android:readPermission="com.whatsapp.sticker.READ" />
     </application>
 
