@@ -91,7 +91,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
         holder.itemView.setOnClickListener(v -> {
             int pos = holder.getAdapterPosition();
-            if (pos == RecyclerView.NO_ID) return;
+            if (pos == RecyclerView.NO_POSITION) return;
             if (selectedPositions.contains(pos)) {
                 selectedPositions.remove(pos);
             } else {

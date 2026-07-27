@@ -134,7 +134,7 @@ public class StickerContentProvider extends ContentProvider {
                         json.license_agreement_website,
                         json.image_data_version,
                         json.avoid_cache ? 1 : 0,
-                        json.animated_sticker_pack
+                        json.animated_sticker_pack ? 1 : 0
                 });
             } catch (Exception e) {
                 Log.e(TAG, "Error reading pack: " + packDir.getName(), e);

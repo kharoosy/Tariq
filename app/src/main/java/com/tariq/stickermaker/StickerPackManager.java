@@ -30,10 +30,12 @@ import java.util.List;
  */
 public class StickerPackManager {
 
-    private static final int STICKER_SIZE  = 512;
-    private static final int TRAY_SIZE     = 96;
-    private static final int MAX_KB        = 100 * 1024; // 100 KB in bytes
-    private static final int TRAY_MAX_KB   = 50  * 1024; // 50 KB
+    private static final int    STICKER_SIZE       = 512;
+    private static final int    TRAY_SIZE          = 96;
+    private static final int    MAX_KB             = 100 * 1024; // 100 KB in bytes
+    private static final int    TRAY_MAX_KB        = 50  * 1024; // 50 KB
+    private static final String DEFAULT_WEBSITE    = "https://tariq.app";
+    private static final boolean ANIMATED_PACK     = false;
 
     // SharedPreferences keys to pass pack info to StickerPackActivity after creation
     private static final String PREFS       = "sticker_prefs";
@@ -88,8 +90,8 @@ public class StickerPackManager {
         // Write stickers.json
         StickerPackJson json = new StickerPackJson(
                 packId, packName, authorName, "tray.webp",
-                "https://tariq.app", "https://tariq.app",
-                "https://tariq.app", "false",
+                DEFAULT_WEBSITE, DEFAULT_WEBSITE,
+                DEFAULT_WEBSITE, ANIMATED_PACK,
                 stickerFiles);
         writeJson(packDir, json);
 
@@ -248,22 +250,22 @@ public class StickerPackManager {
         public final String license_agreement_website;
         public final String image_data_version = "1";
         public final boolean avoid_cache = false;
-        public final String animated_sticker_pack;
+        public final boolean animated_sticker_pack;
         public final List<StickerFile> stickers;
 
         public StickerPackJson(String id, String name, String publisher,
                                String tray, String website, String privacy,
-                               String license, String animated,
+                               String license, boolean animated,
                                List<StickerFile> stickers) {
-            this.identifier              = id;
-            this.name                    = name;
-            this.publisher               = publisher;
-            this.tray_image_file         = tray;
-            this.publisher_website       = website;
-            this.privacy_policy_website  = privacy;
+            this.identifier                = id;
+            this.name                      = name;
+            this.publisher                 = publisher;
+            this.tray_image_file           = tray;
+            this.publisher_website         = website;
+            this.privacy_policy_website    = privacy;
             this.license_agreement_website = license;
-            this.animated_sticker_pack   = animated;
-            this.stickers                = stickers;
+            this.animated_sticker_pack     = animated;
+            this.stickers                  = stickers;
         }
     }
 
