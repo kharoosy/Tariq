@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image thumbnail -->
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="false" />
+
+    <!-- Semi-transparent blue tint when selected -->
+    <View
+        android:id="@+id/selection_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#660066CC"
+        android:visibility="gone" />
+
+    <!-- Check-mark when selected -->
+    <ImageView
+        android:id="@+id/checkmark"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="4dp"
+        android:src="@android:drawable/checkbox_on_background"
+        android:visibility="gone" />
+
+</FrameLayout>
