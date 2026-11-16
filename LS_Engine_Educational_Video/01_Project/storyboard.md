@@ -1,0 +1,24 @@
+# Storyboard — GM LS V8: Open Loop vs Closed Loop (Arabic, 120 s)
+
+All times in seconds, 30 fps (frame = t × 30). The camera is one continuous Hermite-spline path
+(`03_Blender/animate_engine.py → CAM_KEYS`). The only hard cut (102.99 s) is hidden under the
+split-screen dissolve. Narration text = `05_Subtitles/arabic_script.txt`, timing =
+`01_Project/narration_timing.json` (measured from the synthesized audio).
+
+| # | Time | Frames | Camera | 3D action | Motion graphics | Narration (subtitle) |
+|---|------|--------|--------|-----------|-----------------|----------------------|
+| 01 | 0.0–12.0 | 0–359 | Wide 3/4 front-right dolly-in, lens 40→36 mm | Studio lights ramp up (0–3 s), engine idling, pedestal ring glows | Title «كيف يتحكم كمبيوتر محرك LS بالوقود؟» + “Open Loop vs Closed Loop” (orange/blue underline) | كمبيوتر محرك الـ LS يغيّر طريقة التحكم بالوقود حسب حالة المحرك. / اليوم بنشوف الفرق بين الحلقة المفتوحة والمغلقة. |
+| 02 | 12.0–26.5 | 360–794 | Push to MAF/throttle body → through the plenum (26 mm) → over the left bank → front cutaway of the V | Castings turn x-ray; slow-motion crank (0.32 rev/s); blue air particles through runners; port injectors spray (closed-valve timing); valves, pushrods, rockers move; combustion flash + spark per firing order 1-8-7-2-6-5-4-3; exhaust particles | Tracked labels: Throttle Body, Port Fuel Injector, Cylinder 1; live 4-stroke indicator for cylinder 1 (intake/compression/power/exhaust) | الهواء يدخل من الثروتل… / بعدها الخليط يحترق داخل الأسطوانات. / بس كيف يعرف الكمبيوتر كمية الوقود؟ |
+| 03 | 26.5–38.0 | 795–1139 | Pull back to front-left 3/4 including ECU | Castings solid again; sensor harness lights up; data pulses MAF/MAP/ECT/TPS/CKP → ECU; ECU → fuel-rail command pulses | Tracked sensor labels (AR + EN), ECU label; flow: Sensors + Maps → ECU calculation → Injector pulse | كمبيوتر المحرك يعتمد على قراءات الحساسات وخرائط الوقود المبرمجة / عشان يحسب كمية الوقود المناسبة. |
+| 04 | 38.0–55.0 | 1140–1649 | Front view, slow truck right | Lighting → orange. Engine stops, cranks (39.6–40.6 s), fires, cold idle. 3D fuel map rises (RPM × load), operating-point marker moves. O₂ harness dim (no feedback) | Banner «الحلقة المفتوحة — Open Loop»; ECT gauge 20 °C (cold start); “uses MAF • MAP • RPM • ECT • TPS + maps”; “O₂ fuel correction: inactive ✗”; footnote: depends on calibration | في الحلقة المفتوحة، Open Loop… / لكن ما يستخدم حساس الأكسجين لتصحيح الوقود. / وهذا شائع عند التشغيل البارد وبعض ظروف الحمل العالي. |
+| 05 | 55.0–68.0 | 1650–2039 | Front-left on the ECT sensor → low rear-left close-up of upstream O₂ sensor → pull back | Coolant 20→90 °C (ECT sensor glow shifts blue→red); exhaust x-ray with flowing gas; O₂ heater glows (ready); orange → blue light transition (61–66.5 s) | ECT gauge rises; checklist ticks: temperature ✓, O₂ ready ✓, run-time & calibration ✓; O₂ label (Bank 1 Sensor 1); banner morphs Open → Closed | ومع ارتفاع حرارة المحرك وجاهزية حساس الأكسجين، / وإذا تحققت شروط البرمجة، يقدر الكمبيوتر ينتقل للحلقة المغلقة. |
+| 06 | 68.0–88.0 | 2040–2639 | Slow orbit around the left side (ECU, exhaust, O₂) | Blue. Exhaust flow past O₂; blue O₂→ECU pulses; ECU→injector pulses; light x-ray | Banner «الحلقة المغلقة — Closed Loop»; animated feedback-loop diagram (ECU → injector → combustion → exhaust → O₂ → ECU); scrolling narrowband O₂ waveform with rich/lean bands and live “rich → ECU reduces fuel / lean → ECU adds fuel” | في Closed Loop… / ويستخدم التغذية الراجعة… / إذا الخليط غني، يقلل الوقود. وإذا فقير، يزيده، / حسب نظام التحكم والهدف المطلوب. |
+| 07 | 88.0–103.0 | 2640–3089 | ECU hero shot, slow push-in | Green/purple accent lights; ECU status LED; command pulses | STFT dial (green, fast oscillation), LTFT dial (purple, slow learned drift), injector pulse train: base × (1 + STFT + LTFT) | هني نشوف تصحيحات الوقود. STFT… / وLTFT… / والاثنين يساعدون الكمبيوتر يضبط الوقود. |
+| 08 | 103.0–114.5 | 3090–3434 | Split screen (same camera, two renders): left forced Open Loop, right forced Closed Loop | Left: orange, O₂ harness dim; right: blue, active O₂ feedback pulses | Headers Open Loop / Closed Loop; “no O₂ correction ✗” vs “feedback correction ✓”; 0.5 s dissolve in | الفرق الأساسي: Open Loop بدون تصحيح من حساس الأكسجين، / وClosed Loop يستخدم التغذية الراجعة لتعديل الوقود. |
+| 09 | 114.5–120.0 | 3435–3599 | Halves dissolve into one engine; crane back to wide | Orange (left) + blue (right) accent lights together | «افهم نظام الوقود، تفهم محركك أكثر.» + orange/blue rule; fade to black (119.4–120 s) | وهذا هو الفرق بين النظامين في محركات الـ LS. |
+
+Colour code: Open Loop = orange `#FF8A1F`, Closed Loop = electric blue `#1FB6FF`, STFT = green `#3DFF8B`,
+LTFT = purple `#B25BFF`, sensor inputs = cool white.
+
+Scene boundaries vs. the brief: S2/S3 moved from 26.0 → 26.5 s and S8/S9 from 115.0 → 114.5 s so that the
+measured narration fits without speeding the voice beyond a natural rate (see `production_plan.md`).

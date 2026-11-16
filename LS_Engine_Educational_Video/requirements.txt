@@ -1,0 +1,8 @@
+# Python 3.13 (bpy 5.x wheels are built for CPython 3.13)
+bpy==5.3.0            # Blender as a Python module (Cycles renderer)
+numpy
+pillow>=10            # needs libraqm (HarfBuzz + FriBidi) for Arabic shaping
+piper-tts>=1.3        # offline neural TTS (voice: ar_JO-kareem-medium)
+sherpa-onnx           # optional: offline Whisper ASR for the narration QA check
+fonttools             # merges Noto Arabic + Noto Sans fonts
+# system: ffmpeg/ffprobe, fonts-noto-core, libegl1 (bpy import), espeak-ng data ships with piper

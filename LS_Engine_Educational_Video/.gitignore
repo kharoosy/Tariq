@@ -1,0 +1,7 @@
+06_Rendered_Scenes/frames/
+06_Rendered_Scenes/frames_preview/
+04_Audio/narration_chunks/
+__pycache__/
+*.blend1
+03_Blender/engine_only_test.blend
+__pycache__/
