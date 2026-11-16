@@ -229,7 +229,7 @@ def checklist(layer, d, t, items, al, x=W - 120, y=300):
 def loop_diagram(layer, d, t, al, cx=W - 330, cy=430, r=170):
     if al <= 0.01:
         return
-    panel(d, (cx - r - 130, cy - r - 95, cx + r + 130, cy + r + 80), al, 22, fa=0.6)
+    panel(d, (cx - r - 175, cy - r - 95, cx + r + 150, cy + r + 80), al, 22, fa=0.6)
     paste_text(layer, 'دورة التغذية الراجعة', (cx, cy - r - 82), F_BOLD, 30, BLUE, al, 'mt')
     nodes = [('الكمبيوتر', 'ECU'), ('البخاخ', 'Injector'), ('الاحتراق', 'Combustion'), ('العادم', 'Exhaust'),
              ('حساس O₂', 'O₂ Sensor')]
@@ -441,7 +441,7 @@ def overlays(layer, frame, anc, subs):
                             ('وقت التشغيل وشروط المعايرة', 'Run time & calibration conditions', 64.6)],
               fade(t, 56.2, 67.8), x=W - 110, y=310)
     tracked_label(layer, d, anc, 'O2_L_tip', 'حساس الأكسجين — قبل المحوّل', 'Upstream O₂ (Bank 1 Sensor 1)', BLUE,
-                  fade(t, 59.0, 66.8), (200, -200))
+                  fade(t, 59.0, 66.8), (-300, -150))
     mode_banner(layer, d, t, 'الحلقة المغلقة', 'Closed Loop', BLUE, fade(t, 65.0, 87.8, 0.8))
 
     # S6 closed loop

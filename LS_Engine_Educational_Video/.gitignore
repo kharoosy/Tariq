@@ -5,3 +5,5 @@ __pycache__/
 *.blend1
 03_Blender/engine_only_test.blend
 __pycache__/
+07_Final/preview_animatic.mp4
+08_QA/render_log_*.txt
